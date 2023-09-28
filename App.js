@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 
 const Moviequestions = require("./controllers/MoviesQuiz")
+const Footballquestions = require("./controllers/FootballQuiz")
 const bodyParser = require('body-parser');
 
 
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/Movies', Moviequestions)
+app.use('/Football', Footballquestions)
 
 
 app.use((req, res, next) => {
