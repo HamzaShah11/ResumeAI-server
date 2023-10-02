@@ -112,6 +112,7 @@ router.post('/startquiz', async (req, res) => {
     for (let i = 0; i < parsedQuest.questions.questions.length; i++) {
         try {
             console.log("(keuword", parsedQuest.questions.questions[i].keyword);
+            console.log("(keuword", parsedQuest.questions.questions[i].questions.questions);
             const image = await gifsApi(parsedQuest.questions.questions[i].keyword);
             parsedQuest.questions.questions[i].image = image;
         } catch (error) {
